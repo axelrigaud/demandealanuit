@@ -1,0 +1,15 @@
+// Place all the styles related to the Places controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.map {
+	width: 100%;
+	height: 960px;
+	overflow: scroll;
+} 
+
+.map-inner {
+  background-image: image_url('berlingooglemap.png');
+  width: 2060px;
+  height: 100%;
+}
