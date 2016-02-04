@@ -1,7 +1,7 @@
 <div class="map">
   <div class="map-inner">
     <% @places.each do |place| %>
-    <%= link_to place.title, place, class:"#{place.title}-link" %>
+    <%= link_to place.title, place, class:"place-link #{place.title}-link" %>
     <% end %>
   </div>
 </div>
