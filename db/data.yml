@@ -1,0 +1,33 @@
+
+---
+places:
+  columns:
+  - id
+  - title
+  - description
+  - youtube_link
+  - created_at
+  - updated_at
+  - name
+  records: 
+  - - 1
+    - visionar
+    - club pour after
+    - ZUnvkOkCE9s
+    - '2016-02-04 10:04:08.192632'
+    - '2016-02-04 19:07:25.883271'
+    - Der Visionär
+  - - 2
+    - berghain
+    - temple techno
+    - gkQoCCsu_fA
+    - '2016-02-04 10:04:24.450080'
+    - '2016-02-04 19:07:59.578182'
+    - Berghain
+  - - 3
+    - renate
+    - labyrinthe cool
+    - FXBATdbl5GQ
+    - '2016-02-04 10:04:42.795549'
+    - '2016-02-04 19:08:26.824297'
+    - Wilde Renate
