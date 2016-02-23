@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20160223193821) do
     t.string   "youtube_link"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.string   "name"
     t.string   "tagline"
     t.integer  "xpos"
     t.integer  "ypos"
