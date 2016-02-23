@@ -6,8 +6,8 @@
 </p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @place.name %>
+  <strong>Tagline:</strong>
+  <%= @place.tagline %>
 </p>
 
 <p>
@@ -20,5 +20,5 @@
   <%= @place.youtube_link %>
 </p>
 
-<%= link_to 'Edit', edit_place_path(@place) %> |
-<%= link_to 'Back', places_path %>
+<%= link_to 'Edit', edit_backend_place_path(@place) %> |
+<%= link_to 'Back', backend_places_path %>
