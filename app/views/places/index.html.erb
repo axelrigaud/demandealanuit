@@ -11,6 +11,9 @@
             <h4 class="modal-title" id="myModalLabel"><%= place.tagline %></h4>
           </div>
           <div class="modal-body">
+            <p>
+              <%= place.description %>
+            </p>
             <iframe width="560" height="315" src="http://www.youtube.com/embed/<%= place.youtube_link %>" frameborder="0" allowfullscreen></iframe>
           </div>
           <div class="modal-footer">

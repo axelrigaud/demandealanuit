@@ -24,3 +24,8 @@
   text-indent: -10000px;
   position: absolute;
 }
+
+//bootstrap override
+.modal-content {
+  border-radius:0;
+}
