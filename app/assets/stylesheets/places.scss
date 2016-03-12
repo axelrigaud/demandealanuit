@@ -30,6 +30,10 @@
   display: block;
   text-indent: -10000px;
   position: absolute;
+  opacity: 0.8;
+  &:hover {
+    opacity: 1;
+  }
   img {
     position: absolute;;
     @media 
@@ -38,6 +42,7 @@
     transform: scale(0.5) translate(-100%, -100%);
     }
   }
+  transition: 0.3s;
 }
 
 //bootstrap override
