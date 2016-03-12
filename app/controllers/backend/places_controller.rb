@@ -70,6 +70,6 @@ class Backend::PlacesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def place_params
-      params.require(:place).permit(:title, :description, :youtube_link, :tagline, :xpos, :ypos)
+      params.require(:place).permit(:title, :description, :youtube_link, :tagline, :xpos, :ypos, :image_file_name)
     end
 end

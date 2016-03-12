@@ -19,6 +19,10 @@
   <strong>Youtube link:</strong>
   <%= @place.youtube_link %>
 </p>
+<p>
+  <strong>Image file name:</strong>
+  <%= @place.image_file_name %>
+</p>
 
 <%= link_to 'Edit', edit_backend_place_path(@place) %> |
 <%= link_to 'Back', backend_places_path %>
