@@ -5,19 +5,18 @@ culturelle, a provoqué en moi un oubli de la culture au profit d’un plaisir i
   :tagline => 'page 214 : tu traînes sur <strong>Alexanderplatz</strong>',
   :xpos => '10',
   :ypos => '60',
-  :image_file_name => 'roue'
+  :image_file_name => 'roue')
 Place.create(:title => 'golden',
   :description => 'Le club est surnommé Die Apotheke – la pharmacie – car tout s’y achète, à toute heure. Il ne s’agit d’aller nulle part, seulement d’être. Chacun danse pour soi. C’est ce que Berlin a de plus précieux, ce bel équilibre entre complet anonymat et fête de famille. Déjà, j’ai appris à sortir sans but, sans autre fin que la dépense énergétique. « Speed ou trip ? », scande inlassablement un dealer de cinquante piges, ancien acrobate de cirque bulgare. Je fais signe au DJ, lui indique mon oreille et la platine : il me montre la pochette du vinyle, pointe le remix d’Extrawelt de The Leopard. ',
   :youtube_link => 'UJnZmvlbPiA',
   :tagline => 'page 75 : tu accueilles le jour au Golden Gate',
   :xpos => '25',
   :ypos => '75',
-  :image_file_name => 'pont'
+  :image_file_name => 'pont')
 Place.create(:title => 'ritter',
   :description => 'Il me tire les cheveux afin que mon cou s’offre à ses baisers furieux. Je veux qu’encore il me repeigne. « Empêche-moi de faire quoique ce soit, s’il te plaît. Par respect pour elle. Je ne veux pas détruire ce que j’ai construit. » Je suis l’éternelle vis en trop des amours Ikea, moi qui ne construis rien, qui prends les choses comme elles viennent. Pour le punir, je lui offre une ligne de coke bien trop grosse. Au loin, Solomun lance le sidérurgique 5 After 909 de Justus Köhncke.',
   :youtube_link => 'V5s-KLGVcTI&t=1663s',
   :tagline => 'page 101 : tu t’égares au Ritter Butzke',
   :xpos => '50',
   :ypos => '50',
-  :image_file_name => 'lys'
- => [#<Place id: 1, title: "alexanderplatz", description: "Je dépense mes dernières pièces dans un tour de gr...", youtube_link: "UJnZmvlbPiA", created_at: "2016-02-23 20:40:04", updated_at: "2016-03-12 02:25:58", tagline: "page 214 : tu traînes sur <strong>Alexanderplatz</...", xpos: 10, ypos: 60, image_file_name: "roue">, #<Place id: 3, title: "golden", description: "Le club est surnommé Die Apotheke – la pharmacie –...", youtube_link: "UJnZmvlbPiA", created_at: "2016-02-23 20:40:04", updated_at: "2016-03-12 02:26:11", tagline: "page 75 : tu accueilles le jour au Golden Gate", xpos: 25, ypos: 75, image_file_name: "pont">, #<Place id: 2, title: "ritter", description: "Il me tire les cheveux afin que mon cou s’offre à ...", youtube_link: "V5s-KLGVcTI&t=1663s", created_at: "2016-02-23 20:40:04", updated_at: "2016-03-12 02:13:19", tagline: "page 101 : tu t’égares au Ritter Butzke", xpos: 50, ypos: 50, image_file_name: "lys">]
+  :image_file_name => 'lys')
