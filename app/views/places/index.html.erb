@@ -2,7 +2,7 @@
   <div class="map-inner">
     <% @places.each do |place| %>
     <%= link_to('', {style:"left: #{place.xpos}%;top: #{place.ypos}%;", class:"place-link", data: {toggle: 'modal', target: "##{place.title}-modal"}}) do %>
-      <%= image_tag(place.image_file_name+'-retina.png') %>
+      <%= image_tag(place.image_file_name+'.png') %>
     <% end %>
 
     <div class="modal fade" id="<%=place.title%>-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

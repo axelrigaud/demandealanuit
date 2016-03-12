@@ -5,7 +5,8 @@
 	@media 
   (-webkit-min-device-pixel-ratio: 2), 
   (min-resolution: 192dpi) { 
-    background-image: image_url('couv-retina.jpg');
+    background-image: image_url('couv@2x.jpg');
     background-size: cover;
   }
+  background-image: image_url('couv.jpg');
 }
