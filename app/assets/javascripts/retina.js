@@ -7,7 +7,8 @@ function isRetinaDisplay() {
 
 // Example
 $('document').ready(function() {
-  var images = document.getElementsByTagName('img')
+  if isRetinaDisplay() {
+    var images = document.getElementsByTagName('img')
   for (i=0; i < images.length; i++) {
     var low_res_path = images[i].getAttribute('src');
     var extension = low_res_path.slice(-3);
@@ -15,4 +16,6 @@ $('document').ready(function() {
     console.log(hi_res_path)
     images[i].setAttribute('src',hi_res_path)
   }
+  }
+  
 });
