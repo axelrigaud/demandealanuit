@@ -36,11 +36,7 @@
   }
   img {
     position: absolute;;
-    @media 
-    (-webkit-min-device-pixel-ratio: 2), 
-    (min-resolution: 192dpi) { 
     transform: scale(0.5) translate(-100%, -100%);
-    }
   }
   transition: 0.3s;
 }
