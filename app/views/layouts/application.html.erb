@@ -14,6 +14,9 @@
   	<div class="header__title">
   		<a href="#" class="header__anchor" data-toggle="modal" data-target="#about-the-book-modal">Demande à la nuit</a>
   	</div>
+    <div class="header__speaker">
+      <%= render 'speaker' %>
+    </div>
   </div>
   <%= render 'welcome_modal' %>
   <%= render 'about_modal' %>
@@ -44,23 +47,34 @@
 
       }
 
+
+
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
         $('p[data-youtube="true"]').click(function(){
           var video_id = $(this).data('video-id');
+          $('.header__speaker').fadeIn();
           player.loadVideoById(video_id, 5, "large")
         });
+        $('.header__speaker').one("click",
+            function(){
+              pauseVideo();
+            });
       }
 
-      // 5. The API calls this function when the player's state changes.
-      //    The function indicates that when playing a video (state=1),
-      //    the player should play for six seconds and then stop.
-      var done = false;
       function onPlayerStateChange(event) {
 
       }
-      function stopVideo() {
-        player.stopVideo();
+      function playVideo() {
+        player.playVideo();
+      }
+      function resumeVideo() {
+        player.playVideo();
+        $('.header__speaker').one('click',pauseVideo);
+      }
+      function pauseVideo() {
+        player.pauseVideo();
+        $('.header__speaker').one('click',resumeVideo);
       }
     </script>
 
