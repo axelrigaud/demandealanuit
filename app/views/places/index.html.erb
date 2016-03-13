@@ -5,22 +5,9 @@
       <%= image_tag(place.image_file_name+'@2x.png') %>
     <% end %>
 
-    <div class="modal fade" id="<%=place.title%>-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel"><%= place.tagline.html_safe %></h4>
-          </div>
-          <div class="modal-body">
-            <p>
-              <%= place.description %>
-            </p>
-            <p data-youtube="true" data-video-id="<%= place.youtube_link %>">Écouter la musique associée</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <%= render 'place_modal', place: place %>
+
+    
 
 
     <% end %>
