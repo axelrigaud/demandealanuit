@@ -5,3 +5,9 @@
   background-image: image_url('couv@2x.jpg');
   background-size: cover;
 }
+
+#about-the-book p, #welcome p {
+  font-family: serif;
+  padding: 0 20px;
+  font-size: 16px;
+}
