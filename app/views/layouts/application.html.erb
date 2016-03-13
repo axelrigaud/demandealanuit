@@ -8,72 +8,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div class="loader-wrapper">
-    <div class="loader-inner">
-      <h3>Demande à la nuit</h3>
-      <div id="floatBarsG">
-        <div id="floatBarsG_1" class="floatBarsG"></div>
-        <div id="floatBarsG_2" class="floatBarsG"></div>
-        <div id="floatBarsG_3" class="floatBarsG"></div>
-        <div id="floatBarsG_4" class="floatBarsG"></div>
-        <div id="floatBarsG_5" class="floatBarsG"></div>
-        <div id="floatBarsG_6" class="floatBarsG"></div>
-        <div id="floatBarsG_7" class="floatBarsG"></div>
-        <div id="floatBarsG_8" class="floatBarsG"></div>
-      </div>
-    </div>
-</div>
+  <%= render 'loader' %>
+
   <div class="header__container">
   	<div class="header__title">
   		<a href="#" class="header__anchor" data-toggle="modal" data-target="#about-the-book-modal">Demande à la nuit</a>
   	</div>
   </div>
-  <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Bienvenue</h4>
-          </div>
-          <div class="modal-body">
-            <p>
-              Bienvenue sur le site consacré au premier roman d'Anne Laure Jaeglé, Demande à la Nuit.
-            </p>
-            <p>
-              Parcourez la carte de Berlin pour découvrir des extraits du livre.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  <div class="modal fade" id="about-the-book-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">À propos du livre</h4>
-          </div>
-          <div class="modal-body">
-            <p>
-              « La rencontre de deux tracks est une rencontre amoureuse : là aussi il s’agit de vibrer à la même fréquence pour un temps donné, sans qu’une piste n’ait à s’ajuster plus que l’autre. »
-            </p>
-            <p>
-              Anne Laure Jaeglé, passionnée de musique, organisatrice de soirées et de raves clandestines, vit à Berlin. 
-            </p>
-            <div>
-              <div class="cover-container">
-              </div>
-            </div>
-            <p>
-              Disponible en librairies et sur commande à www.lavillebrule.com
-            </p>
-            <p>
-              Playlists : www.youtube/demandealanuit
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <%= render 'welcome_modal' %>
+  <%= render 'about_modal' %>
 
 <%= yield %>
 
