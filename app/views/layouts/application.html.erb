@@ -18,10 +18,18 @@
       <%= render 'speaker' %>
     </div>
   </div>
+      <% @places.each do |place| %>
+
+
+    <%= render 'place_modal', place: place %>
+
+    <% end %>
   <%= render 'welcome_modal' %>
   <%= render 'about_modal' %>
 
 <%= yield %>
+
+<div class="md-overlay"></div>
 <div id="player"></div>
 
     <script>
