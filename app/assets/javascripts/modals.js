@@ -19,6 +19,9 @@ $(document).ready(function(){
       overlay.click(function(){
         $(target).removeClass('md-show');
       })
+      close.click(function(){
+        $(target).removeClass('md-show');
+      })
     })
   })
   

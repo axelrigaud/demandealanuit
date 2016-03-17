@@ -1,10 +1,9 @@
 <div class="map">
   <div class="map-inner">
     <% @places.each do |place| %>
-    <%= link_to('#', {style:"left: #{place.xpos}%;top: #{place.ypos}%;", class:"md-trigger place-link", data: {modal: 'modal-1', target: "##{place.title}"}}) do %>
-      <%= image_tag(place.image_file_name+'@2x.png') %>
-    <% end %>
-
+      <%= link_to('#', {style:"left: #{place.xpos}%;top: #{place.ypos}%;", class:"md-trigger place-link", data: {modal: 'modal-1', target: "##{place.title}"}}) do %>
+        <%= image_tag(place.image_file_name+'@2x.png') %>
+      <% end %>
     <% end %>
   </div>
 </div>
