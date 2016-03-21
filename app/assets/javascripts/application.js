@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require mobile_check
 //= require modals
 //= require loader
 //= require youtube

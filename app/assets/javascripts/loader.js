@@ -2,16 +2,18 @@
 
 $( window ).load(function() {
   var overlay = $('.md-overlay');
-  var close = $('.md-close');
+  
   $('.loader-wrapper').fadeOut(
       "slow",
       function() {
-        $('#welcome').addClass('md-show');
+        var welcome_modal = $('#welcome')
+        var close = welcome_modal.find('.md-close');
+        welcome_modal.addClass('md-show');
         overlay.click(function(){
-          $('#welcome').removeClass('md-show');
+          welcome_modal.removeClass('md-show');
         });
         close.click(function(){
-          $('#welcome').removeClass('md-show');
+          welcome_modal.removeClass('md-show');
         });
       }
     );
