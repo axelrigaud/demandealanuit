@@ -27,7 +27,7 @@
   z-index: 2000;
   visibility: hidden;
   backface-visibility: hidden;
-  transform: translateX(-50%) translateY(-50%);
+  @include transform(translateX(-50%) translateY(-50%));
   background:white;
   overflow: scroll;
 }
@@ -55,10 +55,7 @@
 }
 
 .md-effect-1 .md-content {
-  -webkit-transform: scale(0.7);
-  -moz-transform: scale(0.7);
-  -ms-transform: scale(0.7);
-  transform: scale(0.7);
+  @include transform(scale(0.7));
   opacity: 0;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -66,10 +63,7 @@
 }
 
 .md-show.md-effect-1 .md-content {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+  @include transform(scale(1));
   opacity: 1;
 }
 
@@ -99,7 +93,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    transform: translateX(0) translateY(0);
+    @include transform(translateX(0) translateY(0));
     height: 100%;
   }
 }

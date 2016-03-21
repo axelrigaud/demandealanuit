@@ -37,7 +37,7 @@
   }
   img {
     position: absolute;;
-    transform: scale(0.5) translate(-100%, -100%);
+    @include transform(scale(0.5) translate(-100%, -100%));
   }
   transition: 0.3s;
 }
