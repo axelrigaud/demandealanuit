@@ -30,6 +30,7 @@
   @include transform(translateX(-50%) translateY(-50%));
   background:white;
   overflow: scroll;
+  max-height: 99%;
 }
 
 .md-show {
