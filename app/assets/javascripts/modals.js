@@ -4,17 +4,14 @@ $(document).ready(function(){
     $target.removeClass('md-show');
   }
 
+  var $SlidingTop = $('#SlidingTop');
   $('.header__anchor').click(function(e){
     e.preventDefault();
-    var $about_the_book = $('#about-the-book');
-    var close = $about_the_book.find('.md-close');
-    $about_the_book.addClass('md-show');
-    close.click(function(){
-      hideModal($about_the_book);
-    });
-    overlay.click(function(){
-      hideModal($about_the_book);
-    });
+    $SlidingTop.addClass('SlidingTop--reveal');
+  })
+  $('#SlidingTop__close').click(function(e) {
+    e.preventDefault();
+    $SlidingTop.removeClass('SlidingTop--reveal');
   })
 
   
@@ -32,7 +29,7 @@ $(document).ready(function(){
         var play_link = $target.find('.play-track-modal')
         var video_id = play_link.data('video-id');
         play_link.css({'display':'none'});
-        $('<iframe width="100%" height="100px" src="https://www.youtube.com/embed/'+video_id+'" frameborder="0" allowfullscreen></iframe>').insertBefore(close)
+        //$('<iframe width="100%" height="100px" src="https://www.youtube.com/embed/'+video_id+'" frameborder="0" allowfullscreen></iframe>').insertBefore(close)
       }
 
       overlay.click(function(){
