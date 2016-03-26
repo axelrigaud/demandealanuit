@@ -1,12 +1,12 @@
 #SlidingTop {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   background: white;
-  position: absolute;
   z-index: 100;
   transform: translateY(-100%);
   transition: 0.5s;
   position: absolute;
+  overflow: scroll;
 }
 
 .SlidingTop__content {
@@ -18,8 +18,21 @@
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .SlidingTop--reveal {
   transform: translateY(0) !important;
+}
+
+.body--overflow-y {
+  overflow-y: hidden;
+}
+
+.cover-container {
+  width: 200px;
+  height: 293px;
+  margin: 20px auto;
+  background-image: image_url('couv@2x.jpg');
+  background-size: cover;
 }

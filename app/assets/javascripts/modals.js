@@ -5,13 +5,19 @@ $(document).ready(function(){
   }
 
   var $SlidingTop = $('#SlidingTop');
+  var $body = $('body');
   $('.header__anchor').click(function(e){
     e.preventDefault();
     $SlidingTop.addClass('SlidingTop--reveal');
+    $body.addClass('body--overflow-y');
+    $('html, body').animate({
+        scrollTop: 0
+    }, 500);
   })
   $('#SlidingTop__close').click(function(e) {
     e.preventDefault();
     $SlidingTop.removeClass('SlidingTop--reveal');
+    $body.removeClass('body--overflow-y');
   })
 
   
