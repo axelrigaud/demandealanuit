@@ -1,3 +1,15 @@
+$title: 'Montserrat', sans-serif;
+$text: 'Georgia', serif;
+
+
+* {
+  font-family: $title;
+}
+
+p {
+  font-family: $text;
+}
+
 .header__container {
   position: fixed;
   z-index: 10;
