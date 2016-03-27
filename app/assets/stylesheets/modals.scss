@@ -98,10 +98,11 @@
     @include transform(translateX(0) translateY(0));
     height: 100%;
   }
+  #welcome .md-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
-#welcome .md-content {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
+
