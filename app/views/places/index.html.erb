@@ -1,3 +1,21 @@
+<%= render 'loader' %>
+  <%= render 'sliding_top' %>
+
+  <div class="header__container">
+    <div class="header__title">
+      <a href="#" class="header__anchor" data-target="#about-the-book">Demande à la nuit</a>
+    </div>
+    <div class="header__speaker">
+      <%= render 'speaker' %>
+    </div>
+  </div>
+      <% @places.each do |place| %>
+
+
+    <%= render 'place_modal', place: place %>
+
+    <% end %>
+  <%= render 'welcome_modal' %>
 <div class="map">
   <div class="map-inner">
     <% @places.each do |place| %>
