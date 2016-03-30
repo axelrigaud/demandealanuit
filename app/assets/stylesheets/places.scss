@@ -4,21 +4,27 @@
 
 .map {
 	width: 100%;
-	height: 1280px;
+  height: 1280px;
+  @media (max-device-width:420px) {
+	  height: 640px;
+  }
 	overflow: scroll;
   position: absolute;
   top: 0;
 } 
 
 .map-inner {
-  @media 
-  (-webkit-min-device-pixel-ratio: 2), 
-  (min-resolution: 192dpi) { 
-    background-image: image_url('map@2x.jpg');
-    background-size: cover;
-  }
-  background-image: image_url('map.jpg');
+
+  background-image: image_url('map@2x.jpg');
+  background-size: cover;
   width: 2000px;
+  
+  @media (max-device-width:420px) {
+    background-size: 100%;
+    background-image: image_url('map.jpg');
+    width: 1000px;
+  }
+  
   height: 100%;
   position: relative;
 
