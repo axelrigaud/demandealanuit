@@ -41,7 +41,19 @@
     @include transform(scale(0.5) translate(-100%, -100%));
   }
   transition: 0.3s;
+  animation-name: gigote;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 .reveal {
   opacity: 0.8;
+}
+
+@keyframes gigote {
+    0%   {transform: translateX(0);}
+    90%   {transform: translateX(0);}
+    95%  {transform: translateX(-5px);}
+    100%  {transform: translateX(5px);}
+    //100%  {transform: translateX(-10px)}
 }

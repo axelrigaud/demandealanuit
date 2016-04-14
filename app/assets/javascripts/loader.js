@@ -14,7 +14,7 @@ $( window ).load(function() {
   }
 
   function scheduleReveal (icon,index) {
-    var offset = index * 200;
+    var offset = index * 150;
     setTimeout(function(){revealIcon(icon)},offset);
   }
 
