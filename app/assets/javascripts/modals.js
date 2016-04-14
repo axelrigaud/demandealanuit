@@ -14,6 +14,15 @@ $(document).ready(function(){
       var close = $(target).find('.md-close');
       $target.addClass('md-show');
 
+      var aboutLink = $(target).find('.md-about');
+      aboutLink.click(function() {
+
+          $('html, body').animate({
+              scrollTop: $("#about-the-book").offset().top
+          }, 'slow');
+          hideModal($target);
+      });
+
       if (mobileAndTabletcheck()) {
         var play_link = $target.find('.play-track-modal')
         var video_id = play_link.data('video-id');
