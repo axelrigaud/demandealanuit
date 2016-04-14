@@ -28,7 +28,7 @@ $(document).ready(function(){
       e.preventDefault();
       var target = $(this).data('target');
       var $target = $(target)
-      var close = $(target).find('.md-close');
+      var close = $(target).find('.cross');
       $target.addClass('md-show');
 
       if (mobileAndTabletcheck()) {

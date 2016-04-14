@@ -1,6 +1,7 @@
 <div class="md-modal md-effect-1" id="<%=place.title%>">
   <div class="md-content">
     <h3 class="tagline"><%= place.tagline.html_safe %></h3>
+    <%= render 'cross' %>
     <div>
       <p class="excerpt">
         <%= place.description %>
@@ -8,7 +9,6 @@
       <div class="md-bottom">
         
         <a class="play-track-modal" href="#" data-video-id="<%= place.youtube_link %>">Écouter la musique associée</a>
-        <a class="md-close">Fermer</a>
       </div>
     </div>
   </div>

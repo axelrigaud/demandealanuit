@@ -109,4 +109,17 @@
   }
 }
 
+.cross {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 49px;
+  margin-top: 36px;
+  transition: 0.3s;
+  &:hover {
+    cursor: pointer;
+    transform: rotate(135deg);
+  }
+}
+
 
