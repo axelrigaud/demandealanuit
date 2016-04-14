@@ -3,23 +3,6 @@ $(document).ready(function(){
   function hideModal($target) {
     $target.removeClass('md-show');
   }
-
-  var $SlidingTop = $('#SlidingTop');
-  var $body = $('body');
-  $('.header__anchor').click(function(e){
-    e.preventDefault();
-    $SlidingTop.addClass('SlidingTop--reveal');
-    $body.addClass('body--overflow-y');
-    $('html, body').animate({
-        scrollTop: 0
-    }, 500);
-  })
-  $('#SlidingTop__close').click(function(e) {
-    e.preventDefault();
-    $SlidingTop.removeClass('SlidingTop--reveal');
-    $body.removeClass('body--overflow-y');
-  })
-
   
   var overlay = $('.md-overlay');
 
@@ -30,6 +13,15 @@ $(document).ready(function(){
       var $target = $(target)
       var close = $(target).find('.cross');
       $target.addClass('md-show');
+
+      var aboutLink = $(target).find('.md-about');
+      aboutLink.click(function() {
+
+          $('html, body').animate({
+              scrollTop: $("#about-the-book").offset().top
+          }, 'slow');
+          hideModal($target);
+      });
 
       if (mobileAndTabletcheck()) {
         var play_link = $target.find('.play-track-modal')

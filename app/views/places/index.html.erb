@@ -1,32 +1,31 @@
 <%= render 'loader' %>
-  <%= render 'sliding_top' %>
 
   <div class="header__container">
-    <div class="header__title">
-      <a href="#" class="header__anchor" data-target="#about-the-book">Demande à la nuit</a>
-    </div>
     <div class="header__speaker">
       <%= render 'speaker' %>
     </div>
   </div>
-      <% @places.each do |place| %>
 
-
-    <%= render 'place_modal', place: place %>
-
-    <% end %>
-  <%= render 'welcome_modal' %>
-<div class="map">
-  <div class="map-inner">
     <% @places.each do |place| %>
-      <%= link_to('#', {style:"left: #{place.xpos}%;top: #{place.ypos}%;", class:"md-trigger place-link", data: {modal: 'modal-1', target: "##{place.title}"}}) do %>
-        <% if mobile_device? %>
-          <%= image_tag(place.image_file_name+'.png') %>
-        <% else %>
-          <%= image_tag(place.image_file_name+'@2x.png') %>
-        <% end %>
-      <% end %>
+      <%= render 'place_modal', place: place %>
     <% end %>
-  </div>
-</div>
+
+    <div class="map">
+      <div class="map-inner">
+        <% @places.each do |place| %>
+          <%= link_to('#', {style:"left: #{place.xpos}%;top: #{place.ypos}%;", class:"md-trigger place-link", data: {modal: 'modal-1', target: "##{place.title}"}}) do %>
+            <% if mobile_device? %>
+              <%= image_tag(place.image_file_name+'.png') %>
+            <% else %>
+              <%= image_tag(place.image_file_name+'@2x.png') %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+<section id="about-the-book">
+  <header>
+    À propos du livre
+  </header>
+</section>
 <%= javascript_include_tag :frontend %>

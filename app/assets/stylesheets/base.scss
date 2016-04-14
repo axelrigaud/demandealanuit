@@ -20,27 +20,6 @@ p {
   }
 }
 
-.header__title {
-  padding: 20px;
-}
-
-
-.header__anchor {
-	text-transform: uppercase;
-	color: white;
-  position: relative;
-  z-index: 10;
-  text-shadow: 2px 2px 10px black;
-  font-size: 25px;
-  @media (min-width: 569px) {
-    font-size: 40px;
-  }
-  &:hover, &:focus {
-    text-decoration: none;
-    color:#f38f31;
-  }
-}
-
 .header__speaker {
   position: absolute;
   top: 0;
