@@ -34,6 +34,39 @@
       le Bonbon
     </p>
   </div>
-  
+  <div class="container">
+    <div class="row story__container">
+      <div class="story__book col-md-3">
+        <%= image_tag('livre-pliage.jpg') %>
+      </div>
+      <div class="col-md-7 col-md-offset-1">
+        <p class="story__text">
+          Demande à la nuit vous plonge au coeur de la nuit 
+          berlinoise et du nouvel âge d'or que connait la techno. 
+          Un "journal musical" à l'écriture charnelle et incisive, rythmé par une soixantaine de morceaux.
+          Le portrait d'une génération qui se trouve dans la fête. 
+        </p>
+        <p class="story__find-it">
+          Disponible en librairies, ebook ou sur commande à www.lavillebrule.com
+        </p>
+      </div>
+    </div>
+    <div class="row author__container">
+      <div class="col-md-6 col-md-offset-1 author__left-block">
+        <p class="author__title">
+          l'auteure
+        </p>
+        <p class="author__bio">
+          Anne Laure Jaeglé, passionnée de musique, organisatrice de soirées et de raves clandestines, vit à Berlin. 
+          Demande à la nuit est son premier roman. 
+        </p>
+      </div>
+      <div class="col-md-4 author__photo">
+        <%= image_tag('anne-laure.jpg') %>
+      </div>
+    </div>
 </section>
+<footer class="footer">
+  <p class="footer__text">Tous droits réservés. Texte et illustrations d'Anne Laure Jaeglé. Conception Web par Axel Rigaud.</p>
+</footer>
 <%= javascript_include_tag :frontend %>
