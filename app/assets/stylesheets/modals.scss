@@ -110,11 +110,9 @@
 }
 
 .cross {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin-right: 49px;
-  margin-top: 36px;
+  margin-right: 16px;
+  margin-top: -49px;
+  float: right;
   transition: 0.3s;
   &:hover {
     cursor: pointer;
