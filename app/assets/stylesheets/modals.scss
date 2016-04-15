@@ -18,8 +18,20 @@
 }
 
 .md-bottom {
-  padding: 0 40px;
+  padding: 20px 40px;
+  text-align: center;
 }
+
+.md-about {
+  text-transform: uppercase;
+  color: #000;
+  font-size: 16px;
+  &:hover {
+    text-decoration: underline;
+    color: #000;
+  }
+}
+
 .md-modal {
   position: fixed;
   top: 50%;
@@ -70,19 +82,6 @@
 .md-show.md-effect-1 .md-content {
   @include transform(scale(1));
   opacity: 1;
-}
-
-.play-track-modal, .md-close {
-  color: black;
-  &:hover {
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-  }
-}
-
-.play-track-modal {
-  float: left;
 }
 
 .md-close {

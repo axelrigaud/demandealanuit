@@ -1,9 +1,6 @@
 <%= render 'loader' %>
 
   <div class="header__container">
-    <div class="header__speaker">
-      <%= render 'speaker' %>
-    </div>
   </div>
 
     <% @places.each do |place| %>
@@ -13,7 +10,7 @@
     <div class="map">
       <div class="map-inner">
         <% @places.each.with_index do |place, index| %>
-          <%= link_to('#', {style:"left: #{place.xpos}%;top: #{place.ypos}%;", class:"md-trigger place-link delay-#{index}", data: {modal: 'modal-1', target: "##{place.title}"}}) do %>
+          <%= link_to('#', {style:"left: #{place.xpos}%;top: #{place.ypos}%;", class:"md-trigger place-link delay-#{index}", data: {modal: 'modal-1', target: "##{place.title}", youtube: "#{place.youtube_link}"}}) do %>
             <% if mobile_device? %>
               <%= image_tag(place.image_file_name+'.png') %>
             <% else %>
