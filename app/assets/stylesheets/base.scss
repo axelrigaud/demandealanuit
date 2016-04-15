@@ -20,19 +20,15 @@ p {
   }
 }
 
-.header__speaker {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40px;
-  margin: 10px;
-  display: none;
-  &:hover {
-    cursor: pointer;
-  }
-}
 .modal-backdrop {
 	background: linear-gradient(to bottom, #3c348a 0%, #d22020 25%, #f38f31 50%, #d22020 75%,#3c348a 100%);
 }
 
+.section__header {
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 

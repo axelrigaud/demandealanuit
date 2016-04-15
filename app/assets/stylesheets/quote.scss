@@ -1,0 +1,29 @@
+.quote__container {
+  height: 227px;
+  width: 100%;
+  background-image: image_url('quote-background.jpg');
+  background-size:cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.quote__content, .quote__author {
+  background: white;
+  font-size: 24px;
+  display: inline-block;
+}
+
+.quote__content {
+  font-style: italic;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  white-space: nowrap;
+}
+
+.quote__author {
+  position: absolute;
+  top: 65%;
+  left: 68%;
+}
