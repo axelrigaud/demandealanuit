@@ -2,197 +2,65 @@
   width: 100%;
   position: absolute;
   height: 100%;
-  background: white;
+  background: radial-gradient(#fff, #ccc);
+  overflow: hidden;
+  perspective: 500;
   z-index: 15;
 }
 
-.loader-inner {
+.cube {
+  animation: rotate 7000ms linear infinite;
+  bottom: 0;
+  height: 100px;
+  left: 0;
+  margin: auto;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  @include transform(translate(-50%, -50%));
-  width: 184px;
+  transform-style: preserve-3d;
+  right: 0;
+  top: 0;
+  width: 100px;
+}
 
-  h3 {
-    text-transform: uppercase;
-    color: #2f3490;
-    font-size: 17px;
+@keyframes rotate {
+  100% {
+    transform: rotateY(360deg) rotateX(720deg) rotateZ(1080deg);
   }
 }
 
-#floatBarsG{
-  
-  width: 180px;
-  
+.face {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
-.floatBarsG{
-  position:absolute;
-  top:0;
-  background-color:rgb(61,52,138);
-  width:22px;
-  height:22px;
-  animation-name:bounce_floatBarsG;
-    -o-animation-name:bounce_floatBarsG;
-    -ms-animation-name:bounce_floatBarsG;
-    -webkit-animation-name:bounce_floatBarsG;
-    -moz-animation-name:bounce_floatBarsG;
-  animation-duration:1.5s;
-    -o-animation-duration:1.5s;
-    -ms-animation-duration:1.5s;
-    -webkit-animation-duration:1.5s;
-    -moz-animation-duration:1.5s;
-  animation-iteration-count:infinite;
-    -o-animation-iteration-count:infinite;
-    -ms-animation-iteration-count:infinite;
-    -webkit-animation-iteration-count:infinite;
-    -moz-animation-iteration-count:infinite;
-  animation-direction:normal;
-    -o-animation-direction:normal;
-    -ms-animation-direction:normal;
-    -webkit-animation-direction:normal;
-    -moz-animation-direction:normal;
-  transform:scale(.3);
-    -o-transform:scale(.3);
-    -ms-transform:scale(.3);
-    -webkit-transform:scale(.3);
-    -moz-transform:scale(.3);
+.front {
+  background: #3c348a;
+  transform: translateZ(50px);
 }
 
-#floatBarsG_1{
-  left:0;
-  animation-delay:0.6s;
-    -o-animation-delay:0.6s;
-    -ms-animation-delay:0.6s;
-    -webkit-animation-delay:0.6s;
-    -moz-animation-delay:0.6s;
+.back {
+  background: #444;
+  transform: translateZ(-50px);
 }
 
-#floatBarsG_2{
-  left:22px;
-  animation-delay:0.75s;
-    -o-animation-delay:0.75s;
-    -ms-animation-delay:0.75s;
-    -webkit-animation-delay:0.75s;
-    -moz-animation-delay:0.75s;
+.left {
+  background: #f38f31;
+  transform: translateX(-50px) rotateY(90deg);
 }
 
-#floatBarsG_3{
-  left:45px;
-  animation-delay:0.9s;
-    -o-animation-delay:0.9s;
-    -ms-animation-delay:0.9s;
-    -webkit-animation-delay:0.9s;
-    -moz-animation-delay:0.9s;
+.right {
+  background: #e3e3e3;
+  transform: translateX(50px) rotateY(90deg);
 }
 
-#floatBarsG_4{
-  left:67px;
-  animation-delay:1.05s;
-    -o-animation-delay:1.05s;
-    -ms-animation-delay:1.05s;
-    -webkit-animation-delay:1.05s;
-    -moz-animation-delay:1.05s;
+.top {
+  background: #6c6c6c;
+  transform: translateY(-50px) rotateX(90deg);
 }
 
-#floatBarsG_5{
-  left:90px;
-  animation-delay:1.2s;
-    -o-animation-delay:1.2s;
-    -ms-animation-delay:1.2s;
-    -webkit-animation-delay:1.2s;
-    -moz-animation-delay:1.2s;
-}
-
-#floatBarsG_6{
-  left:112px;
-  animation-delay:1.35s;
-    -o-animation-delay:1.35s;
-    -ms-animation-delay:1.35s;
-    -webkit-animation-delay:1.35s;
-    -moz-animation-delay:1.35s;
-}
-
-#floatBarsG_7{
-  left:135px;
-  animation-delay:1.5s;
-    -o-animation-delay:1.5s;
-    -ms-animation-delay:1.5s;
-    -webkit-animation-delay:1.5s;
-    -moz-animation-delay:1.5s;
-}
-
-#floatBarsG_8{
-  left:157px;
-  animation-delay:1.64s;
-    -o-animation-delay:1.64s;
-    -ms-animation-delay:1.64s;
-    -webkit-animation-delay:1.64s;
-    -moz-animation-delay:1.64s;
-}
-
-
-
-@keyframes bounce_floatBarsG{
-  0%{
-    transform:scale(1);
-    background-color:rgba(56,52,139,0.97);
-  }
-  50%{
-    transform:scale(.2);
-    background-color:rgb(244,44,58);
-  }
-
-  100%{
-    transform:scale(.3);
-    background-color:rgb(210,32,32);
-  }
-}
-
-@-o-keyframes bounce_floatBarsG{
-  0%{
-    -o-transform:scale(1);
-    background-color:rgba(61,52,138,0.97);
-  }
-
-  100%{
-    -o-transform:scale(.3);
-    background-color:rgb(210,32,32);
-  }
-}
-
-@-ms-keyframes bounce_floatBarsG{
-  0%{
-    -ms-transform:scale(1);
-    background-color:rgba(61,52,138,0.97);
-  }
-
-  100%{
-    -ms-transform:scale(.3);
-    background-color:rgb(210,32,32);
-  }
-}
-
-@-webkit-keyframes bounce_floatBarsG{
-  0%{
-    -webkit-transform:scale(1);
-    background-color:rgba(61,52,138,0.97);
-  }
-
-  100%{
-    -webkit-transform:scale(.3);
-    background-color:rgb(210,32,32);
-  }
-}
-
-@-moz-keyframes bounce_floatBarsG{
-  0%{
-    -moz-transform:scale(1);
-    background-color:rgba(61,52,138,0.97);
-  }
-
-  100%{
-    -moz-transform:scale(.3);
-    background-color:rgb(210,32,32);
-  }
+.bottom {
+  background: #d22020;
+  transform: translateY(50px) rotateX(90deg);
 }
