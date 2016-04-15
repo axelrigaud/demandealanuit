@@ -50,10 +50,18 @@
   opacity: 0.8;
 }
 
+$places: 12;
+
+@for $i from 1 through $places {
+  .delay-#{$i} {
+    animation-delay: #{$i*1.3+0.5}s;
+  }
+}
+
 @keyframes gigote {
     0%   {transform: translateX(0);}
     90%   {transform: translateX(0);}
-    95%  {transform: translateX(-5px);}
-    100%  {transform: translateX(5px);}
+    95%  {transform: translateX(-2px);}
+    100%  {transform: translateX(2px);}
     //100%  {transform: translateX(-10px)}
 }
