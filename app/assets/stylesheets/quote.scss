@@ -20,6 +20,7 @@ $quote__container-height: 227px;
   background: white;
   font-size: 24px;
   display: inline-block;
+  padding: 8px 10px;
 }
 
 .quote__content {
@@ -28,12 +29,14 @@ $quote__container-height: 227px;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
+  box-shadow: 0 27px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22);
 }
 
 .quote__author {
   position: absolute;
   top: 65%;
   left: 68%;
+  box-shadow: 0 12px 15px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
 }
 .owl-stage-outer, .owl-item, .owl-item > div {
   height: $quote__container-height;
