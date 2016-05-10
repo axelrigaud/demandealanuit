@@ -1,5 +1,7 @@
+$quote__container-height: 227px;
+
 .quote__container {
-  height: 227px;
+  height: $quote__container-height;
   width: 100%;
   background-image: image_url('quote-background.jpg');
   -webkit-background-size: cover;
@@ -9,7 +11,7 @@
   @media(min-device-width:420px){
     background-attachment: fixed;
   }
-  
+
   position: relative;
   margin-bottom: 60px;
 }
@@ -23,8 +25,8 @@
 .quote__content {
   font-style: italic;
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
 
@@ -32,4 +34,7 @@
   position: absolute;
   top: 65%;
   left: 68%;
+}
+.owl-stage-outer, .owl-item, .owl-item > div {
+  height: $quote__container-height;
 }

@@ -1,0 +1,21 @@
+{
+  "name": "demandealanuit",
+  "homepage": "https://github.com/axelrigaud/demandealanuit",
+  "authors": [
+    "axel rigaud <axel.rigaud@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "owl.carousel": "owl-carousel2#^2.1.3"
+  }
+}
