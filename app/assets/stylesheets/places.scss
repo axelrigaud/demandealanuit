@@ -17,6 +17,8 @@
   background-image: image_url('map@2x.jpg');
   background-size: cover;
   width: 1400px;
+  
+  margin: 0 auto;
 
   @media (max-device-width:420px) {
     background-size: 100%;
