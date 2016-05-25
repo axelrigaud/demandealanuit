@@ -10,6 +10,11 @@ p {
   font-family: $text;
 }
 
+h1 {
+  text-indent: -999pxpr; 
+  position: absolute;
+}
+
 .header__container {
   position: fixed;
   z-index: 10;
