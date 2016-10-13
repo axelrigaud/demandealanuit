@@ -1,20 +1,21 @@
 .map {
+	top: 0;
+
 	width: 100%;
   height: 896px;
-	background: black;
   @media (max-device-width:420px) {
 	  height: 448px;
   }
 	overflow: scroll;
-  top: 0;
+
+	background: black;
 }
 
 .map-inner {
+	position: relative;
 
-  background-image: image_url('map@2x.jpg');
-  background-size: cover;
   width: 1400px;
-
+	height: 100%;
   margin: 0 auto;
 
   @media (max-device-width:420px) {
@@ -23,14 +24,14 @@
     width: 700px;
   }
 
-  height: 100%;
-  position: relative;
-
+	background-image: image_url('map@2x.jpg');
+	background-size: cover;
 }
 
 .place-link {
   display: block;
   position: absolute;
+
   opacity: 0;
   &:hover {
     opacity: 1;
@@ -45,6 +46,7 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
 .reveal {
   opacity: 0.8;
 }
@@ -62,5 +64,4 @@ $places: 12;
     90%   {transform: translateX(0);}
     95%  {transform: translateX(-2px);}
     100%  {transform: translateX(2px);}
-    //100%  {transform: translateX(-10px)}
 }
