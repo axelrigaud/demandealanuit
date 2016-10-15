@@ -18,5 +18,5 @@ function revealIcon(icon) {
 
 $( window ).load(function() {
   $('.loader-wrapper').fadeOut(
-      'slow',revealIcons);
+    'slow',revealIcons);
 });
