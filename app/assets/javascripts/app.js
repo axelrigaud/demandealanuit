@@ -1,9 +1,8 @@
 var App = {
   init: function () {
     $('.owl-carousel').owlCarousel({
-      items:1,
-      margin:1,
-      loop:true,
+      items: 1,
+      margin :1,
       autoplay: true,
       autoplayTimeout: 3000,
       autoplaySpeed: 1000

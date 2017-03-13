@@ -1,11 +1,11 @@
 /**
- * Owl Carousel v2.1.1
- * Copyright 2013-2016 David Deutsch
- * Licensed under MIT (https://github.com/OwlCarousel2/OwlCarousel2/blob/master/LICENSE)
+ * Owl Carousel v2.2.1
+ * Copyright 2013-2017 David Deutsch
+ * Licensed under  ()
  */
 /**
  * Owl carousel
- * @version 2.1.0
+ * @version 2.1.6
  * @author Bartosz Wojciechowski
  * @author David Deutsch
  * @license The MIT License (MIT)
@@ -326,6 +326,7 @@
 			var clones = [],
 				items = this._items,
 				settings = this.settings,
+				// TODO: Should be computed from number of min width items in stage
 				view = Math.max(settings.items * 2, 4),
 				size = Math.ceil(items.length / 2) * 2,
 				repeat = settings.loop && items.length ? settings.rewind ? view : Math.max(view, size) : 0,
@@ -335,6 +336,7 @@
 			repeat /= 2;
 
 			while (repeat--) {
+				// Switch to only using appended clones
 				clones.push(this.normalize(clones.length / 2, true));
 				append = append + items[clones[clones.length - 1]][0].outerHTML;
 				clones.push(this.normalize(items.length - 1 - (clones.length - 1) / 2, true));
@@ -515,6 +517,9 @@
 			});
 
 			settings = $.extend({}, this.options, overwrites[match]);
+			if (typeof settings.stagePadding === 'function') {
+				settings.stagePadding = settings.stagePadding();
+			}
 			delete settings.responsive;
 
 			// responsive class
@@ -525,13 +530,11 @@
 			}
 		}
 
-		if (this.settings === null || this._breakpoint !== match) {
-			this.trigger('change', { property: { name: 'settings', value: settings } });
-			this._breakpoint = match;
-			this.settings = settings;
-			this.invalidate('settings');
-			this.trigger('changed', { property: { name: 'settings', value: this.settings } });
-		}
+		this.trigger('change', { property: { name: 'settings', value: settings } });
+		this._breakpoint = match;
+		this.settings = settings;
+		this.invalidate('settings');
+		this.trigger('changed', { property: { name: 'settings', value: this.settings } });
 	};
 
 	/**
@@ -1022,17 +1025,23 @@
 	Owl.prototype.maximum = function(relative) {
 		var settings = this.settings,
 			maximum = this._coordinates.length,
-			boundary = Math.abs(this._coordinates[maximum - 1]) - this._width,
-			i = -1, j;
+			iterator,
+			reciprocalItemsWidth,
+			elementWidth;
 
 		if (settings.loop) {
 			maximum = this._clones.length / 2 + this._items.length - 1;
 		} else if (settings.autoWidth || settings.merge) {
-			// binary search
-			while (maximum - i > 1) {
-				Math.abs(this._coordinates[j = maximum + i >> 1]) < boundary
-					? i = j : maximum = j;
+			iterator = this._items.length;
+			reciprocalItemsWidth = this._items[--iterator].width();
+			elementWidth = this.$element.width();
+			while (iterator--) {
+				reciprocalItemsWidth += this._items[iterator].width() + this.settings.margin;
+				if (reciprocalItemsWidth > elementWidth) {
+					break;
+				}
 			}
+			maximum = iterator + 1;
 		} else if (settings.center) {
 			maximum = this._items.length - 1;
 		} else {
@@ -1267,7 +1276,7 @@
 		} else if (document.documentElement && document.documentElement.clientWidth) {
 			width = document.documentElement.clientWidth;
 		} else {
-			throw 'Can not detect viewport width.';
+			console.warn('Can not detect viewport width.');
 		}
 		return width;
 	};
@@ -1295,7 +1304,7 @@
 			item = this.prepare(item);
 			this.$stage.append(item);
 			this._items.push(item);
-			this._mergers.push(item.find('[data-merge]').andSelf('[data-merge]').attr('data-merge') * 1 || 1);
+			this._mergers.push(item.find('[data-merge]').addBack('[data-merge]').attr('data-merge') * 1 || 1);
 		}, this));
 
 		this.reset(this.isNumeric(this.settings.startPosition) ? this.settings.startPosition : 0);
@@ -1324,11 +1333,11 @@
 			this._items.length === 0 && this.$stage.append(content);
 			this._items.length !== 0 && this._items[position - 1].after(content);
 			this._items.push(content);
-			this._mergers.push(content.find('[data-merge]').andSelf('[data-merge]').attr('data-merge') * 1 || 1);
+			this._mergers.push(content.find('[data-merge]').addBack('[data-merge]').attr('data-merge') * 1 || 1);
 		} else {
 			this._items[position].before(content);
 			this._items.splice(position, 0, content);
-			this._mergers.splice(position, 0, content.find('[data-merge]').andSelf('[data-merge]').attr('data-merge') * 1 || 1);
+			this._mergers.splice(position, 0, content.find('[data-merge]').addBack('[data-merge]').attr('data-merge') * 1 || 1);
 		}
 
 		this._items[current] && this.reset(this._items[current].index());
@@ -1904,7 +1913,7 @@
 				image = new Image();
 				image.onload = $.proxy(function() {
 					$element.css({
-						'background-image': 'url(' + url + ')',
+						'background-image': 'url("' + url + '")',
 						'opacity': '1'
 					});
 					this._core.trigger('loaded', { element: $element, url: url }, 'lazy');
@@ -2304,7 +2313,7 @@
 
 		if (video.type === 'youtube') {
 			html = '<iframe width="' + width + '" height="' + height + '" src="//www.youtube.com/embed/' +
-				video.id + '?autoplay=1&v=' + video.id + '" frameborder="0" allowfullscreen></iframe>';
+				video.id + '?autoplay=1&rel=0&v=' + video.id + '" frameborder="0" allowfullscreen></iframe>';
 		} else if (video.type === 'vimeo') {
 			html = '<iframe src="//player.vimeo.com/video/' + video.id +
 				'?autoplay=1" width="' + width + '" height="' + height +
